@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="calculator">
+        <div class = "actualCalc">
+           
+            <input type="text" id="inp" readonly placeholder="0"><span class="love"></span>
+            <br>
+            <div class = "row">
+                <span><button onclick="display('1')" id="1">1</button></span>
+                <span><button onclick="display('2')" id="2">2</button></span>
+                <span><button onclick="display('3')" id="3">3</button></span>
+            </div>
+            <div class = "row">
+                <span ><button onclick="display('4')" id="4">4</button></span>
+                <span ><button onclick="display('5')" id="5">5</button></span>
+                <span ><button onclick="display('6')" id="6">6</button></span>
+            </div>
+            <div class = "row">
+                <span ><button onclick="display('7')" id="7">7</button></span>
+                <span ><button onclick="display('8')" id="8">8</button></span>
+                <span ><button onclick="display('9')" id="9">9</button></span>
+            </div>
+            <div  class = "row">
+                <span ><button onclick="display('-')" id="sub">-</button></span>
+                <span ><button onclick="display('0')" id="0">0</button></span>
+                <span ><button onclick="display('+')" id="add">+</button></span>
+               
+            </div>
+            <div class = "row">
+                <span ><button onclick="display('/')" id="divi">/</button></span>
+                <span ><button onclick="display('*')" id="mul">x</button></span>
+                <span ><button onclick="calculate()" id="equ">=</button></span>
+            </div>
+
+            <div class = "row">
+                <span ><button onclick="display('.')" id="dec">.</button></span>
+                <span ><button onclick="del()" id="del"><=</button></span>
+                <span ><button onclick="clr()" id="clr">clr</button></span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    let screen = document.getElementById("inp");
+
+    function display(num){
+            screen.value+=num;
+    }
+    function calculate(){
+        try{
+            // console.log(screen.value.length);
+            screen.value = eval(screen.value);
+            switch(screen.value){
+            case "6383018321":{
+                screen.value = "harsha is Good";
+            setTimeout(()=>{
+                screen.value = "";
+            },3000);
+            break;
+            }
+            case "6374899061":{
+                screen.style.fontSize = "200%";
+                screen.value = "DhanushOruPottaBadu";
+                // screen.style.backgroundColor= "green";
+                setTimeout(()=>{
+                 screen.style.fontSize = "50px";
+                screen.value = "";
+            },3000);
+            break;
+            }
+            case "9940393343":{
+                screen.value = "🤞❤😊loveU";
+            setTimeout(()=>{
+                screen.value = "";
+            },3000);
+            break;
+            }
+        }
+        if(screen.value.length>20){
+                screen.value ="NiOruMudhevi";
+            setTimeout(()=>{
+                screen.value = "";
+            },3000);
+        }
+        }catch(err){
+            screen.value = "nee Oru Muttal";
+            setTimeout(()=>{
+                screen.value = "";
+            },3000);
+        }
+
+    }
+    function del(){
+            screen.value = screen.value.slice(0,-1);
+    }
+    function clr(){
+        screen.value = ""; 
+    }
+
+    </script>
+
+</body>
+</html>
